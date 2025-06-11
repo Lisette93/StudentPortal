@@ -1,0 +1,30 @@
+@import './Variables.scss';
+
+.page-wrapper {
+  background: linear-gradient(to bottom right, $primary-color, white);
+  min-height: 100vh;
+  color:$text-light;
+}
+
+.register-card {
+  max-width: 700px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color:$text-light;
+  }
+
+  .register-card .btn {
+  border-radius: 50px;
+  transition: all 0.2s ease;
+  background-color: $primary-color;
+  border: none;
+  color:$text-light;
+
+  &:hover {
+    background-color: #2c8c45;
+    transform: scale(1.05);
+  }
+}
