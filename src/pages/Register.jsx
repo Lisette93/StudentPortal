@@ -1,10 +1,8 @@
 import RegisterForm from "../components/RegisterForm";
-import React, {useContext} from "react";
 import {RegistrationContext} from "../contexts/RegistrationContext";
 import '../scss/Register.scss'
 
 export default function Register() {
-const {registrations} = useContext(RegistrationContext);
 
   return (
     <div className="page-wrapper d-flex justify-content-center align-items-center">

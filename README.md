@@ -1,12 +1,26 @@
-# React + Vite
+# StudentPortal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## En webbapp byggd med React där studenter kan:
+- Se tillgängliga kurser
+- Läsa nyheter/blogginlägg
+- Registrera sig till en kurs
 
-Currently, two official plugins are available:
+## Teknik:
+- React (Vite)
+- React Router
+- Bootstrap + SCSS
+- Material UI (för formulär)
+- Context API + localStorage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Publicering:
+Projektet är publicerat via GitHub Pages:
+https://Lisette93.github.io/StudentPortal/
+Byggt med 'npm run build' och publicerat med 'npm run deploy' (via gh-pages).
+Bilder laddas via 'import.meta.env.BASE_URL' för att fungera på GitHub Pages.
+En '404.html' används för att routing ska fungera även vid direktlänkar.
+Skolprojekt - F25D
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+ Av: Lisette93 F25D

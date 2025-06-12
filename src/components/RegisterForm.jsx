@@ -5,32 +5,39 @@ import { RegistrationContext } from "../contexts/RegistrationContext";
 
 
 export default function Register() { 
+// State for input values
 const [name, setName] = useState("");
 const [email, setEmail] = useState ("");
 const [selectedCourse, setSelectedCourse] = useState("");
+
+// State for validation error messages
 const [nameError, setNameError] = useState("");
 const [emailError, setEmailError] = useState("");
 const [courseError, setCourseError] = useState("");
+
+// Success message after registration
 const [successMessage, setSuccessMessage] = useState("");
 
+// Access global registration context
 const { setRegistrations } = useContext(RegistrationContext);
 
 
-
+// Handle form submission
 const handleSubmit = (e) => {
   e.preventDefault(); 
   
+  // Clear previous error messages
   setNameError("");
   setEmailError("");
   setCourseError("");
 
   let isValid = true;
-
+   // Validate name
    if (!name.trim()) {
     setNameError("Name is required");
     isValid = false;
   }
-
+  // Validate email
   if (!email.trim()) {
     setEmailError("Email is required");
     isValid = false;
@@ -38,12 +45,12 @@ const handleSubmit = (e) => {
     setEmailError("Enter a valid email");
     isValid = false;
   }
-
+  // Validate course selection
   if (!selectedCourse) {
     setCourseError("Please select a course");
     isValid = false;
   }
-
+  // If all is valid, save registration
   if (isValid) {
   const registration = {
   name,
@@ -52,13 +59,15 @@ const handleSubmit = (e) => {
   timestamp: new Date().toISOString()
 };
 
+// Save to context and localStorage
 setRegistrations(registration); 
 localStorage.setItem("registration", JSON.stringify(registration));
 
-
+  // Clear form
   setName("");
   setEmail("");
   setSelectedCourse("");
+  // Show success message
   setSuccessMessage("Registration saved!");
   setTimeout(() => setSuccessMessage(""), 3000);
 }
@@ -71,6 +80,7 @@ return (
 {successMessage && <p className="text-success ">{successMessage}</p>}
 
 <form onSubmit={handleSubmit}> 
+  {/* Name input */}
     <TextField 
       label="Full Name"
       variant="outlined"
@@ -84,6 +94,7 @@ return (
       InputLabelProps={{ style: { color: 'white' } }}
     /> 
 
+  {/* Email input */}
     <TextField
       label="Email adress"
       variant="outlined"
@@ -97,6 +108,7 @@ return (
       InputLabelProps={{ style: { color: 'white' } }}
     /> 
 
+  {/* Course dropdown */}
     <FormControl fullWidth className="mb-3 " error={!!courseError}>
     <InputLabel id="course-label" style={{ color: "white" }}>Course</InputLabel>
     <Select
@@ -116,7 +128,7 @@ return (
       {courseError && <p style={{ color: 'red', fontSize: '0.875rem' }}>{courseError}</p>}
     </FormControl>
 
-
+  {/* Submit button */}
     <Button className="btn btn-primary mt-auto"
       variant="contained"
       color="primary"
