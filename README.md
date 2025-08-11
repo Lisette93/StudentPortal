@@ -1,25 +1,28 @@
-# StudentPortal
+# 🎓 Student Portal
 
-## En webbapp byggd med React där studenter kan:
-- Se tillgängliga kurser
-- Läsa nyheter/blogginlägg
-- Registrera sig till en kurs
+A responsive and interactive **student portal** where users can browse and search for available courses.  
+Built with **HTML**, **SCSS**, and **JavaScript (ES Modules)**, with course data fetched from an external API.
 
-## Teknik:
-- React (Vite)
-- React Router
-- Bootstrap + SCSS
-- Material UI (för formulär)
-- Context API + localStorage
+---
 
-## Publicering:
-Projektet är publicerat via GitHub Pages:
-https://Lisette93.github.io/StudentPortal/
-Byggt med 'npm run build' och publicerat med 'npm run deploy' (via gh-pages).
-Bilder laddas via 'import.meta.env.BASE_URL' för att fungera på GitHub Pages.
-En '404.html' används för att routing ska fungera även vid direktlänkar.
-Skolprojekt - F25D
+## ✨ Features
+- 📚 **Course listing** – Displays all available courses fetched from the API.
+- 🔍 **Search functionality** – Filter courses dynamically as you type.
+- 📱 **Responsive design** – Optimized for desktop, tablet, and mobile.
+- 📂 **Modular code structure** – JavaScript split into ES modules for better maintainability.
 
+---
+
+## 🚀 Live Demo
+🔗 [**View the live version here**](https://lisette93.github.io/StudentPortal/)
+
+---
+
+## 🛠️ Tech Stack
+- **HTML5** – Semantic and accessible markup
+- **SCSS (CSS3)** – For structured, maintainable styling
+- **JavaScript (ES Modules)** – For dynamic content and interactivity
+- **Fetch API** – For retrieving course data from an external API
 
 ---
 
