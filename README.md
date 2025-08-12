@@ -1,6 +1,7 @@
 <img width="2491" height="1263" alt="bild" src="https://github.com/user-attachments/assets/e87990a7-1134-4c30-b9fc-1c88b3cee559" width="800" />
 
-<img width="2491" height="1273" alt="bild" src="https://github.com/user-attachments/assets/e8123152-d993-492a-8fcf-615675bc0d83" width="800" />
+<img width="2489" height="1270" alt="bild" src="https://github.com/user-attachments/assets/b357b451-3dcd-4f3e-b9c4-f48e16cb1701" width="800" />
+
 
 # 🎓 Student Portal
 
